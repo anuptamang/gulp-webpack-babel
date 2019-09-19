@@ -1,0 +1,5 @@
+src/js/ES5/*
+src/js/vendors/*
+node_modules/*
+dist/js/*
+src/*.html

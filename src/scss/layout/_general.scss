@@ -1,0 +1,68 @@
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+a,
+button {
+	outline: none !important;
+	@include animate(color background border opacity visibility box-shadow);
+}
+
+.has-bg {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.has-overlay {
+	position: relative;
+	z-index: 1;
+
+	&:before {
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+
+.block-vc {
+	min-height: 300px;
+
+	@include media('>=desktop') {
+		min-height: 362px;
+	}
+
+	&:after {
+		content:'';
+		min-height:inherit;
+	}
+}
+
+.list-text {
+	>li {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 10px;
+
+		&:before {
+			content:'';
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background:$dark;
+		}
+	}
+}
